@@ -7,6 +7,7 @@
     <color name="colorPrimaryText">#212121</color>
     <color name="colorSecondaryText">#757575</color>
     <color name="colorDivider">#BDBDBD</color>
+    <color name="colorDanger">#FF0000</color>
 
     <color name="activityBackground">@android:color/white</color>
 
@@ -14,4 +15,5 @@
     <color name="offwhite">#FAEBD7</color>
 
     <color name="outlineColor">#99ABB5</color>
+    <color name="transparent">#00000000</color>
 </resources>

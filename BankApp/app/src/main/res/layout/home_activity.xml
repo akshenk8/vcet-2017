@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorDivider"
+    android:padding="8dp"
     tools:context="com.akshen.bankapp.home.HomeActivity">
 
     <ListView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -11,9 +13,8 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="8dp"
-        android:dividerHeight="8dp"
-        android:divider="@color/activityBackground"
+        android:dividerHeight="16dp"
+        android:divider="@color/transparent"
         android:footerDividersEnabled="false"/>
 
 </RelativeLayout>

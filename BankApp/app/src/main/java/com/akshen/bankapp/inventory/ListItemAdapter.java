@@ -1,6 +1,8 @@
 package com.akshen.bankapp.inventory;
 
+import android.annotation.TargetApi;
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,8 +32,14 @@ public class ListItemAdapter extends ArrayAdapter<BloodGroupListItem> {
 
         TextView bg = (TextView) tmpView.findViewById(R.id.blood_group_text_view);
         bg.setText(currentBloodGroupListItem.getBloodGroupDisplayString());
+
+        if(currentBloodGroupListItem.getQuantity()==0){
+            bg.setTextColor(Color.RED);
+        }
+
         TextView qty = (TextView) tmpView.findViewById(R.id.value);
         qty.setText(currentBloodGroupListItem.getQuantity() + "");
+
         Button plus = (Button) tmpView.findViewById(R.id.plusbutton);
         plus.setOnClickListener(new View.OnClickListener() {
             @Override

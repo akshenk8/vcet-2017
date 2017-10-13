@@ -10,7 +10,8 @@
         android:layout_weight="1"
         android:gravity="center"
         android:id="@+id/blood_group_text_view"
-        android:textSize="24dp" />
+        android:textSize="24dp"
+        android:textColor="@color/colorPrimaryText"/>
 
     <Button
         android:id="@+id/minusbutton"
@@ -25,7 +26,8 @@
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_weight="1"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryText"/>
 
     <Button
         android:id="@+id/plusbutton"

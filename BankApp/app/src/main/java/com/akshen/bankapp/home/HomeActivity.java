@@ -16,6 +16,8 @@ import com.akshen.bankapp.notification.Config;
 
 import java.util.ArrayList;
 
+import static com.akshen.bankapp.notification.Config.BLOOD_BANK_ADMIN_FIREBASE_SENT;
+
 public class HomeActivity extends AppCompatActivity {
 
     SharedPreferences sp;
@@ -33,7 +35,7 @@ public class HomeActivity extends AppCompatActivity {
             finish();
         }
 
-        if(!sp.getBoolean(Config.BLOOD_BANK_ADMIN_FIREBASE_SENT,false)){
+        if(!sp.getBoolean(BLOOD_BANK_ADMIN_FIREBASE_SENT,false)){
             new Config().sendRegistrationToServer(this,null);
         }
 
@@ -63,6 +65,7 @@ public class HomeActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.logout:
                 sp.edit().remove(LoginActivity.BANK_ID_TAG).commit();
+                sp.edit().putBoolean(BLOOD_BANK_ADMIN_FIREBASE_SENT, false).commit();
                 Intent i = new Intent(this, LoginActivity.class);
                 startActivity(i);
                 finish();

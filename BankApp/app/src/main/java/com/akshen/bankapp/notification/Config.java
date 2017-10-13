@@ -78,7 +78,7 @@ public class Config {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> map = new HashMap<>();
-                map.put("bankid", bankid);
+                map.put("bid", bankid);
                 map.put("firebase", finalToken);
                 return map;
             }

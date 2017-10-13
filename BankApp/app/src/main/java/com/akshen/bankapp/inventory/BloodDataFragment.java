@@ -185,7 +185,7 @@ public class BloodDataFragment extends Fragment {
                     @Override
                     protected Map<String, String> getParams() throws AuthFailureError {
                         Map<String, String> map = new HashMap<>();
-                        map.put("bankid", ((InventoryActivity) getActivity()).getBankId());
+                        map.put("bid", ((InventoryActivity) getActivity()).getBankId());
                         map.put("type", inventoryType.getInventoryType());
                         map.put("data", bloodGroups.toString());
                         return map;
