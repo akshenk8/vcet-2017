@@ -1,5 +1,5 @@
 <?php
-define('FIREBASE_API_KEY', "AAAAsoG0kkE:APA91bEv17JeNwBV3v1elFCAy_wtyG517cfMBv5jo-9dKCyAmQL1SykZFtGamRd-vAwpTmLWLu_8gyjnJ1bkIt-tU-9uNkVpJP1hwEwIRguysTjj-64BAFHSoXnqKSLUxNJEIgKaAPtQ");
+define('FIREBASE_API_KEY', "AAAA2hVs1-w:APA91bFqS9FeCdjKOlMSJp5g8RDkS7R6kxbbXBonlAfEbZeYo67mD-ZPWJ8EaZLpp0Xwa95qmkl73nKctCsOmxV9sQ_pEvcogGc_7U_yyl1_rW1psCBI5aFruV3NSSl_nQjcg6SIp_fJ");
 
 class Firebase {
         // sending push message to single user by firebase reg id        

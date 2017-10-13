@@ -11,7 +11,7 @@
 		
 		$name=$cxn->real_escape_string($name);
 		$pass=$cxn->real_escape_string($pass);
-		$qry="SELECT `bid`,`active` from `$table` where `name` like '$name' and `password` like '$pass'";
+		$qry="SELECT `bid`,`active` from `$table` where `username` like '$name' and `password` like '$pass'";
 		$qry=$cxn->query($qry);
 		$q=$qry->num_rows;
 		if($q==1){

@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 	if(!(isset($_POST['bid']))) {
 		$arr['msg']='error';
-		echo json_encod	e($arr);		
+		echo json_encode($arr);		
 	}
 	else{
 		include 'db.php';
@@ -12,7 +12,7 @@ error_reporting(E_ALL);
 		
 		$bid=$cxn->real_escape_string($bid);
 
-		$qry="SELECT `bid`,`active` from `$table2` where `	`='$bid'";
+		$qry="SELECT `bid`,`active` from `$table2` where `bid`='$bid'";
 		$qry=$cxn->query($qry);
 		$q=$qry->num_rows;
 		if($q==1){
@@ -48,7 +48,7 @@ error_reporting(E_ALL);
 			echo json_encode($arr);
 		}
 		else{
-			$arr['msg']='error';
+			$arr['msg']='error2';
 			echo json_encode($arr);
 		}
 	}
