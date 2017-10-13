@@ -41,6 +41,11 @@ public class CampHistoryFragment extends Fragment {
         // Required empty public constructor
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        loadData();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

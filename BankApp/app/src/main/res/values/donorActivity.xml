@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="addDonationUrl">/add_donations.php</string>
+    <string name="checkDonationUrl">/check_donation.php</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="scan">SCAN</string>
+    <string name="quantity">Quantity(in ML)</string>
+    <string name="notEligible">User is not Eligible to Donate</string>
+    <string name="addDonation">Add Donation</string>
+
+</resources>

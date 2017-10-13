@@ -3,6 +3,7 @@ package com.akshen.bankapp;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
@@ -32,6 +33,7 @@ import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
 
+    static final int MY_REQUEST=10;
     private String url = "";
     String TAG = "LOGIN", NAME_TAG = "blood_bank_app_admin_email", PASS_TAG = "blood_bank_app_admin_pass";
     public static String BANK_ID_TAG = "blood_bank_app_admin_id";

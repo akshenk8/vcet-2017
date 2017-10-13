@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import com.akshen.bankapp.R;
 import com.akshen.bankapp.camp.CampMainActivity;
+import com.akshen.bankapp.donor.DonorActivity;
+import com.akshen.bankapp.emergency.EmergencyActivity;
 import com.akshen.bankapp.inventory.InventoryActivity;
 
 import java.util.ArrayList;
@@ -63,8 +65,8 @@ public class HomeAdapter extends ArrayAdapter<HomeItemHolder> {
             textContainer.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    Intent i = new Intent(getContext(), Emergency.class);
-//                    getContext().startActivity(i);
+                    Intent i = new Intent(getContext(), EmergencyActivity.class);
+                    getContext().startActivity(i);
                 }
             });
         } else if (currentHomeItemHolder.getHeading().equals(getContext().getString(R.string.homeListString2))) {
@@ -87,8 +89,8 @@ public class HomeAdapter extends ArrayAdapter<HomeItemHolder> {
             textContainer.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    Intent i = new Intent(getContext(), DonorActivity.class);
-//                    getContext().startActivity(i);
+                    Intent i = new Intent(getContext(), DonorActivity.class);
+                    getContext().startActivity(i);
                 }
             });
         } else if (currentHomeItemHolder.getHeading().equals(getContext().getString(R.string.homeListString5))) {

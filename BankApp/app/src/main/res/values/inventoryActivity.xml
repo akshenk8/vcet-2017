@@ -10,13 +10,6 @@
     <string name="platelets_concentrates">Platelets Concentrates</string>
     <string name="cryoprecipitate">Cryoprecipitate</string>
 
-    <!--<string-array name="inventory_items">-->
-        <!--<item>@string/whole_blood</item>-->
-        <!--<item>@string/packed_red_blood_cells</item>-->
-        <!--<item>@string/fresh_frozen_plasma</item>-->
-        <!--<item>@string/platelets_concentrates</item>-->
-        <!--<item>@string/cryoprecipitate</item>-->
-    <!--</string-array>-->
 
     <string name="op">O+</string>
     <string name="on">O-</string>

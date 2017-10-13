@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.akshen.bankapp.emergency.EmergencyActivity">
+
+    <Spinner
+        android:id="@+id/blood_groups"
+        android:layout_marginTop="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:hint="@string/quantityBottles"
+        android:id="@+id/quantity"/>
+
+    <Button
+        android:onClick="submit"
+        android:text="@string/submit"
+        android:layout_marginTop="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="previous"
+        android:text="@string/previous"
+        android:id="@+id/previous"
+        android:visibility="gone"
+        android:layout_marginTop="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

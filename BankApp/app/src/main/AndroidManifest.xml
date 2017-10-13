@@ -16,8 +16,6 @@
         android:roundIcon="@mipmap/blood_bank_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait">
@@ -34,10 +32,9 @@
             android:name=".inventory.InventoryActivity"
             android:screenOrientation="portrait" />
 
-
         <meta-data
-        android:name="com.google.android.geo.API_KEY"
-        android:value="@string/api_key" />
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/api_key" />
 
         <activity
             android:name=".camp.CampMainActivity"
@@ -57,5 +54,10 @@
             </intent-filter>
         </service>
         <!-- ./Firebase Notifications -->
+        <activity android:name=".donor.DonorActivity" />
+        <activity android:name=".donor.QRView" />
+        <activity android:name=".emergency.EmergencyActivity" />
+        <activity android:name=".emergency.PreviousEmerActivity"></activity>
     </application>
+
 </manifest>

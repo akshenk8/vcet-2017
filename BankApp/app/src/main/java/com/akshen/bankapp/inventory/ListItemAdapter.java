@@ -35,6 +35,8 @@ public class ListItemAdapter extends ArrayAdapter<BloodGroupListItem> {
 
         if(currentBloodGroupListItem.getQuantity()==0){
             bg.setTextColor(Color.RED);
+        }else{
+            bg.setTextColor(Color.BLACK);
         }
 
         TextView qty = (TextView) tmpView.findViewById(R.id.value);
