@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDivider"
+
+    android:padding="8dp"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/noCampsText"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:text="@string/noCamps"
+        android:textAppearance="@android:style/TextAppearance.Medium"/>
+
+    <ListView
+        android:id="@+id/campHistoryList"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="8dp"
+        android:divider="@color/transparent"
+        android:footerDividersEnabled="false"/>
+
+</RelativeLayout>

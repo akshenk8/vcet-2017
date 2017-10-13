@@ -1,0 +1,32 @@
+<resources>
+    <string name="campUpdateUrl">/update_camp.php</string>
+    <string name="campGetUrl">/get_camp.php</string>
+    <string name="campDeleteUrl">/delete_camp.php</string>
+
+    <string name="createNewCamp">Create New Camp</string>
+    <string name="pastCamps">Past Camps</string>
+    <string name="submit">SUBMIT</string>
+    <string name="doctors_in_camp">Doctors in camp(optional)</string>
+    <string name="no_of_volunteers_required">No. of volunteers required(default: 0)</string>
+    <string name="end_time">End time:</string>
+    <string name="start_time">Start time:</string>
+    <string name="end_date">End Date:</string>
+    <string name="start_date">Start Date:</string>
+    <string name="city">City</string>
+    <string name="address_line_2">Address line 2</string>
+    <string name="address_line_1">Address line 1</string>
+    <string name="name_of_the_camp">Name of the camp</string>
+    <string name="selectLocation">Select Location</string>
+
+    <string name="nameError">Enter a valid name of length 4 or more</string>
+    <string name="locationError">Location is required</string>
+    <string name="endDateError">End date should be after start date</string>
+
+    <string name="starts">Starts: </string>
+    <string name="ends">Ends: </string>
+    <string name="noCamps">No data for camps available.</string>
+
+    <string name="completed">Completed</string>
+    <string name="pending">Pending</string>
+    <string name="ongoing">Ongoing</string>
+</resources>

@@ -4,7 +4,7 @@
     <string name="protocol">http://</string>
     <string name="domain">192.168.137.88</string>
     <string name="baseUrl">/bloodbank/admin</string>
-    <string name="api_key">AIzaSyBqbKfdl6i0FOTzOdN8zTnzDv0qOxWqxok</string>
+    <string name="api_key">AIzaSyAu1U29gG4q_wVFQ9-wZbaPQWwcU6535gQ</string>
 
     <string name="otp">OTP</string>
     <string name="noInternetConnection">No Internet Connection</string>
@@ -20,4 +20,5 @@
     <string name="errorOccurred">Error Occurred</string>
     <string name="accountDeactivated">Account Deactivated</string>
     <string name="successful">Successful</string>
+    <string name="delete">Delete</string>
 </resources>

@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.akshen.bankapp.R;
+import com.akshen.bankapp.camp.CampMainActivity;
 import com.akshen.bankapp.inventory.InventoryActivity;
 
 import java.util.ArrayList;
@@ -70,8 +71,8 @@ public class HomeAdapter extends ArrayAdapter<HomeItemHolder> {
             textContainer.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    Intent i = new Intent(getContext(), CampMainActivity.class);
-//                    getContext().startActivity(i);
+                    Intent i = new Intent(getContext(), CampMainActivity.class);
+                    getContext().startActivity(i);
                 }
             });
         } else if (currentHomeItemHolder.getHeading().equals(getContext().getString(R.string.homeListString3))) {
