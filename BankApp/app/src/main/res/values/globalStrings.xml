@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BloodBankApp</string>
+
+    <string name="protocol">http://</string>
+    <string name="domain">192.168.137.88</string>
+    <string name="baseUrl">/bloodbank/admin</string>
+    <string name="api_key">AIzaSyBqbKfdl6i0FOTzOdN8zTnzDv0qOxWqxok</string>
+
+    <string name="otp">OTP</string>
+    <string name="noInternetConnection">No Internet Connection</string>
+    <string name="loggingIn">Logging in...</string>
+    <string name="saving">Saving...</string>
+    <string name="loading">Loading...</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="saved">Saved</string>
+    <string name="errorOccurred">Error Occurred</string>
+    <string name="accountDeactivated">Account Deactivated</string>
+    <string name="successful">Successful</string>
+</resources>

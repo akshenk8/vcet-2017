@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="listItemBackgroundColor">@color/white</color>
+
+    <dimen name="home_list_item_height">88dp</dimen>
+
+    <string name="homeListString1">Emergency Form</string>
+    <string name="homeListString2">Blood Donation Camp</string>
+    <string name="homeListString3">Blood Packet Inventory</string>
+    <string name="homeListString4">Scan Donor</string>
+    <string name="homeListString5">Settings</string>
+
+    <string-array name="homeListHeadingStrings">
+        <item>@string/homeListString1</item>
+        <item>@string/homeListString2</item>
+        <item>@string/homeListString3</item>
+        <item>@string/homeListString4</item>
+        <item>@string/homeListString5</item>
+    </string-array>
+
+    <string name="homeListContent1">Request blood from near by eligible donors.</string>
+    <string name="homeListContent2">Schedule a camp</string>
+    <string name="homeListContent3">Manage inventory</string>
+    <string name="homeListContent4">Check donor data</string>
+    <string name="homeListContent5">Change app settings</string>
+
+    <string-array name="homeListDescriptionStrings">
+        <item>@string/homeListContent1</item>
+        <item>@string/homeListContent2</item>
+        <item>@string/homeListContent3</item>
+        <item>@string/homeListContent4</item>
+        <item>@string/homeListContent5</item>
+    </string-array>
+
+    <integer-array name="homeListDrawable">
+        <item>@drawable/emer_form</item>
+        <item>@drawable/blood_camp</item>
+        <item>@drawable/inventory_manager</item>
+        <item>@drawable/scan</item>
+        <item>@drawable/settings1</item>
+    </integer-array>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="inventoryUpdateUrl">/update_inventory.php</string>
+    <string name="inventoryGetUrl">/get_inventory.php</string>
+
+    <string name="whole_blood">Whole Blood(W/B)</string>
+    <string name="packed_red_blood_cells">Packed Red Blood Cells(PRBC)</string>
+    <string name="fresh_frozen_plasma">Fresh Frozen Plasma(FFP)</string>
+    <string name="platelets_concentrates">Platelets Concentrates</string>
+    <string name="cryoprecipitate">Cryoprecipitate</string>
+
+    <!--<string-array name="inventory_items">-->
+        <!--<item>@string/whole_blood</item>-->
+        <!--<item>@string/packed_red_blood_cells</item>-->
+        <!--<item>@string/fresh_frozen_plasma</item>-->
+        <!--<item>@string/platelets_concentrates</item>-->
+        <!--<item>@string/cryoprecipitate</item>-->
+    <!--</string-array>-->
+
+    <string name="op">O+</string>
+    <string name="on">O-</string>
+    <string name="ap">A+</string>
+    <string name="an">A-</string>
+    <string name="bp">B+</string>
+    <string name="bn">B-</string>
+    <string name="abp">AB+</string>
+    <string name="abn">AB-</string>
+
+    <string-array name="blood_groups">
+        <item>@string/op</item>
+        <item>@string/on</item>
+        <item>@string/ap</item>
+        <item>@string/an</item>
+        <item>@string/bp</item>
+        <item>@string/bn</item>
+        <item>@string/abp</item>
+        <item>@string/abn</item>
+    </string-array>
+
+    <string name="saveChanges">Save Changes?</string>
+    <string name="saveChangesMadeTo">Save changes made to </string>
+</resources>
