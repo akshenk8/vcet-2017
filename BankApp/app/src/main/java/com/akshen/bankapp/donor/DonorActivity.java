@@ -3,8 +3,10 @@ package com.akshen.bankapp.donor;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -43,6 +45,13 @@ public class DonorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.donor_activity);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.hometoolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
+        toolbar.setTitle("User Profile");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         queue = VolleyRequestQueue.getInstance(this);
         pd = new ProgressDialog(this);
         pd.setTitle(getString(R.string.loading));

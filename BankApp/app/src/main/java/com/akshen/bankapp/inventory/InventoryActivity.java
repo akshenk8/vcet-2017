@@ -2,10 +2,12 @@ package com.akshen.bankapp.inventory;
 
 import android.app.ProgressDialog;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import com.akshen.bankapp.LoginActivity;
@@ -42,6 +44,12 @@ public class InventoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inventory_activity);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.hometoolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
+        toolbar.setTitle("User Profile");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         urlUpdate = getString(R.string.protocol) + getString(R.string.domain)
                 + getString(R.string.baseUrl) + getString(R.string.inventoryUpdateUrl);

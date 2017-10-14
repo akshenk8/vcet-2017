@@ -30,6 +30,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".inventory.InventoryActivity"
+            android:parentActivityName=".home.HomeActivity"
             android:screenOrientation="portrait" />
 
         <meta-data
@@ -38,9 +39,11 @@
 
         <activity
             android:name=".camp.CampMainActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:parentActivityName=".home.HomeActivity"/>
         <activity
             android:name=".camp.HistoryCampViewActivity"
+            android:parentActivityName=".home.HomeActivity"
             android:screenOrientation="portrait" />
         <!-- Firebase Notifications -->
         <service android:name=".notification.MyFirebaseMessagingService">
@@ -54,10 +57,13 @@
             </intent-filter>
         </service>
         <!-- ./Firebase Notifications -->
-        <activity android:name=".donor.DonorActivity" />
+        <activity android:name=".donor.DonorActivity"
+            android:parentActivityName=".home.HomeActivity"/>
         <activity android:name=".donor.QRView" />
-        <activity android:name=".emergency.EmergencyActivity" />
-        <activity android:name=".emergency.PreviousEmerActivity"></activity>
+        <activity android:name=".emergency.EmergencyActivity"
+            android:parentActivityName=".home.HomeActivity"/>
+        <activity android:name=".emergency.PreviousEmerActivity"
+            android:parentActivityName=".home.HomeActivity"></activity>
     </application>
 
 </manifest>

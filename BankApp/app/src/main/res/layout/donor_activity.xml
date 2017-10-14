@@ -6,22 +6,37 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:padding="16dp"
     tools:context="com.akshen.bankapp.donor.DonorActivity">
 
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/hometoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
 
     <LinearLayout
         android:id="@+id/uid_scan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/scan" />
 
         <EditText
             android:id="@+id/field_phone_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/input_outline"
             android:hint="@string/hint_phone_number"
             android:inputType="phone"
@@ -38,51 +53,77 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:onClick="QrScanner"
-            android:text="@string/scan" />
+            android:padding="16dp"
+            android:text="@string/scan"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            android:theme="@style/ThemeOverlay.MyDarkButton" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/uid_details"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="16dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
+        android:padding="8dp"
         android:visibility="gone">
 
-        <TextView
-            android:id="@+id/bname"
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="@android:style/TextAppearance.Medium"/>
+            android:background="@drawable/input_outline">
 
-        <TextView
-            android:id="@+id/uname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textAppearance="@android:style/TextAppearance.Medium"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/ubg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textAppearance="@android:style/TextAppearance.Medium"/>
+                <TextView
+                    android:id="@+id/bname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@android:style/TextAppearance.Medium" />
+
+                <TextView
+                    android:id="@+id/uname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textAppearance="@android:style/TextAppearance.Medium" />
+
+                <TextView
+                    android:id="@+id/ubg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textAppearance="@android:style/TextAppearance.Medium" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
         <EditText
             android:id="@+id/quantity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:background="@drawable/input_outline"
             android:hint="@string/quantity"
             android:inputType="number"
-            android:maxLines="1" />
+            android:maxLines="1"
+            android:padding="16dp" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="addDonation"
+            android:padding="16dp"
             android:text="@string/addDonation"
-            android:onClick="addDonation" />
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            android:theme="@style/ThemeOverlay.MyDarkButton" />
     </LinearLayout>
 
 </LinearLayout>

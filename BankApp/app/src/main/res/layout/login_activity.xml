@@ -72,6 +72,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        android:theme="@style/ThemeOverlay.MyDarkButton"
         android:text="@string/login" />
 
 </LinearLayout>

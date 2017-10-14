@@ -3,11 +3,13 @@ package com.akshen.bankapp.camp;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -65,6 +67,12 @@ public class CampMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.camp_main_activity);
+
+        Toolbar toolbar = (Toolbar)findViewById(R.id.hometoolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
+        toolbar.setTitle("User Profile");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         updateUrl = getString(R.string.protocol) + getString(R.string.domain)
                 + getString(R.string.baseUrl) + getString(R.string.campUpdateUrl);

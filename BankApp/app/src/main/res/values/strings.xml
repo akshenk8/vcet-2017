@@ -1,1 +1,8 @@
-<resources></resources>
+<resources>
+    <string name="banks">Banks</string>
+    <string name="users">Users</string>
+    <string name="bloodgroup">Blood Group</string>
+    <string name="hindi">"हिंदी"</string>
+    <string name="english">English</string>
+    <string name="marathi">"मराठी"</string>
+</resources>

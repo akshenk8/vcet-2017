@@ -1,7 +1,9 @@
 package com.akshen.bankapp.camp;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -30,6 +32,13 @@ public class HistoryCampViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.camp_single_history_view_activity);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.hometoolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
+        toolbar.setTitle("User Profile");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         data = getIntent().getParcelableExtra("data");
 
         url = getString(R.string.protocol) + getString(R.string.domain)

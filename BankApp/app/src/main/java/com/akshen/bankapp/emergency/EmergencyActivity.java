@@ -3,8 +3,10 @@ package com.akshen.bankapp.emergency;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -46,6 +48,12 @@ public class EmergencyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.emergency_activity);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.hometoolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
+        toolbar.setTitle("User Profile");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         queue = VolleyRequestQueue.getInstance(this);
         pd = new ProgressDialog(this);

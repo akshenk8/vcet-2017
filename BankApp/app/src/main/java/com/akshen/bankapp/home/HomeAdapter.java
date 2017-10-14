@@ -1,14 +1,17 @@
 package com.akshen.bankapp.home;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.akshen.bankapp.R;
@@ -97,6 +100,7 @@ public class HomeAdapter extends ArrayAdapter<HomeItemHolder> {
             textContainer.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    showChangeLangDialog();
 //                    Intent i = new Intent(getContext(), InventoryActivity.class);
                     //getContext().startActivity(i);
                 }
@@ -105,4 +109,33 @@ public class HomeAdapter extends ArrayAdapter<HomeItemHolder> {
 
         return listItemView;
     }
+
+    public void showChangeLangDialog() {
+
+        String[] language = {getContext().getString(R.string.english), getContext().getString(R.string.hindi), getContext().getString(R.string.marathi)};
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("Choose an animal");
+
+        int checkedItem = 1; // cow
+        builder.setSingleChoiceItems(language, checkedItem, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // user checked an item
+            }
+        });
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //Ok Button Clicked
+            }
+        });
+        builder.setNegativeButton("Cancel", null);
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+    }
+
 }

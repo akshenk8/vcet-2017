@@ -2,5 +2,5 @@
 <resources>
     <string name="quantityBottles">Quantity(in Bottles)</string>
     <string name="algoUrl">/algo.php</string>
-    <string name="previous">Previous</string>
+    <string name="previous">PREVIOUS</string>
 </resources>

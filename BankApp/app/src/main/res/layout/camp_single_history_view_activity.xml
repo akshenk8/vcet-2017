@@ -6,63 +6,81 @@
     android:layout_height="match_parent"
     android:dividerPadding="16dp"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:weightSum="2.0"
+
     tools:context=".camp.HistoryCampViewActivity">
 
-    <TextView
-        android:id="@+id/camp_name"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/name_of_the_camp"
-        android:textAppearance="@android:style/TextAppearance.Medium"
-        android:layout_marginBottom="16dp"/>
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/camp_address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textAppearance="@android:style/TextAppearance.Medium"
-        android:layout_marginBottom="16dp"/>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/hometoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/start_date"
-        android:textAppearance="@android:style/TextAppearance.Medium"
-        android:layout_marginBottom="16dp"
-        android:id="@+id/start_date"/>
+        android:padding="16dp"
+        android:weightSum="2.0"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/end_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/end_date"
-        android:textAppearance="@android:style/TextAppearance.Medium"
-        android:layout_marginBottom="16dp"/>
+        <TextView
+            android:id="@+id/camp_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/name_of_the_camp"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
 
-    <TextView
-        android:id="@+id/camp_volunteers"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/no_of_volunteers_required"
-        android:textAppearance="@android:style/TextAppearance.Medium"
-        android:layout_marginBottom="16dp" />
+        <TextView
+            android:id="@+id/camp_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text=""
+            android:textAppearance="@android:style/TextAppearance.Medium" />
 
-    <TextView
-        android:id="@+id/camp_doctors"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/doctors_in_camp"
-        android:textAppearance="@android:style/TextAppearance.Medium"
-        android:layout_marginBottom="16dp"/>
+        <TextView
+            android:id="@+id/start_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/start_date"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
 
-    <Button
-        android:id="@+id/camp_submit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="delete"
-        android:text="@string/delete" />
+        <TextView
+            android:id="@+id/end_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/end_date"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
+
+        <TextView
+            android:id="@+id/camp_volunteers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/no_of_volunteers_required"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
+
+        <TextView
+            android:id="@+id/camp_doctors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/doctors_in_camp"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
+
+        <Button
+            android:id="@+id/camp_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="delete"
+            android:theme="@style/ThemeOverlay.MyDarkButton"
+            android:text="@string/delete" />
+    </LinearLayout>
 </LinearLayout>
 

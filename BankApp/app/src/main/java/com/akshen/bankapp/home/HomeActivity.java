@@ -3,8 +3,10 @@ package com.akshen.bankapp.home;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
@@ -22,11 +24,18 @@ public class HomeActivity extends AppCompatActivity {
 
     SharedPreferences sp;
     String bankid;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
+
+        toolbar = (Toolbar)findViewById(R.id.hometoolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
+        toolbar.setTitle("User Profile");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         sp = new Utils().getApplicationPreference(this);
         if ((bankid = sp.getString(LoginActivity.BANK_ID_TAG, null)) == null) {
