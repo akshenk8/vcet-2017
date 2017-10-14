@@ -5,6 +5,11 @@
     <dimen name="home_list_item_height">88dp</dimen>
 
 
+    <string name="eligibleUrl">check_eligible.php</string>
+    <string name="willBeEligibleIn1">You will be eligible in </string>
+    <string name="willBeEligibleIn2">days to donate blood.</string>
+
+    <string name="eligibleToDonate">You are eligible to donate blood.</string>
 
     <string name="homeListString1">Nearby</string>
     <string name="homeListString2">Rewards</string>

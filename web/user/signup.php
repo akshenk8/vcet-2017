@@ -37,7 +37,7 @@
 
 
     $query = "INSERT INTO `user_details` (`uid`,`name`,`mobile_no`,`blood_group`,`gender`,`dob`) VALUES ('$uid','$name','$mobile_no','$blood_group','$gender','$dob')";
-
+    // echo $query;
     if(!mysqli_query($cxn,$query)){
         mysqli_close($cxn);
         echo 'User not signuped due to some reason!';

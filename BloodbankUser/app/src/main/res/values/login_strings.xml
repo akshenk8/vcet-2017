@@ -31,7 +31,7 @@
     <string name="mobile">Mobile No...</string>
     <string name="bloodgroup">Blood Group</string>
     <string name="gender">Gender</string>
-    <string name="dob">Date Of Birth</string>
+    <string name="dob">Date Of Birth (YYYY-MM-DD)</string>
     <string name="city">"City of Residences"</string>
 
     <string name="register">Add Details</string>

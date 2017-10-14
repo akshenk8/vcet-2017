@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.a8080.bloodbank.bloodbankuser.R;
 import com.a8080.bloodbank.bloodbankuser.history.HistoryActivity;
+import com.a8080.bloodbank.bloodbankuser.nearby.NearbyActivity;
 
 import java.util.ArrayList;
 
@@ -85,9 +86,9 @@ public class HomeAdapter extends ArrayAdapter<HomeItemHolder> {
             textContainer.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    Intent i = new Intent(getContext(), Emergency.class);
+                    Intent i = new Intent(getContext(), NearbyActivity.class);
 
-//                    getContext().startActivity(i);
+                    getContext().startActivity(i);
 
                 }
             });

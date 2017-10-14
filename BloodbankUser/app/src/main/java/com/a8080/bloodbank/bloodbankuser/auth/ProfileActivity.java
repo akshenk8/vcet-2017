@@ -169,7 +169,8 @@ public class ProfileActivity extends AppCompatActivity {
                             map.put("mobile_no", mAuth.getCurrentUser().getPhoneNumber());
                             map.put("blood_group", bloodgroup.getText().toString().trim());
                             map.put("gender", gender);
-                            map.put("dob", dob.getText().toString().trim());
+
+                            map.put("dob", dob.getText().toString().trim().replace('/','-'));
 
                             Log.e(TAG,mAuth.getCurrentUser().getPhoneNumber());
                             return map;
