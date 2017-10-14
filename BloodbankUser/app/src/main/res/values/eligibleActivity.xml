@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notEligible">You are not Eligible</string>
+
+    <string name="eligible">Congrats,you have passed the basic test.\n But, their might be more eligibility checks before you actually donate.</string>
+
+    <string name="eq1">Are you less than 18 years of age?</string>
+    <string name="eq2">Are you over 55 years old ?</string>
+    <string name="eq3">Is your weight less than 45 kg?</string>
+    <string name="eq4">Have you been pregnant or have just given birth?</string>
+    <string name="eq5">Do you have a serious heart condition?</string>
+    <string name="eq6">Are your haemoglobin levels below 12.5gm/100ml?</string>
+    <string name="eq7">Are you at risk for exposure to HIV, the virus that causes AIDS?</string>
+    <string name="eq8">Have you ever injected drugs?</string>
+    <string name="eq9">Have you had any medicines within the past week?</string>
+    <string name="eq10">Have taken the tetanus injection anytime during the last month?</string>
+    <string name="eq11">Have undergone a dental surgery (eg. root canal) within the past 6 months?</string>
+    <string name="eq12">Have you ever lived with a person with clinical hepatitis B or hepatitis C during the last year?</string>
+    <string name="eq13">Have you consumed alcohol or tobacco within the past 24 hours?</string>
+</resources>

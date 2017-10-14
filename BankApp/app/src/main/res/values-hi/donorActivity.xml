@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="addDonationUrl">/add_donations.php</string>
+    <string name="checkDonationUrl">/check_donation.php</string>
+    <string name="hint_phone_number">फ़ोन नंबर</string>
+    <string name="scan">स्कैन</string>
+    <string name="quantity">मात्रा (एमएल में)</string>
+    <string name="notEligible">उपयोगकर्ता दान करने के लिए योग्य नहीं है</string>
+    <string name="addDonation">दान जोड़ें</string>
+
+</resources>

@@ -9,5 +9,8 @@
     <string name="api_key">AIzaSyDZr36q_lZgOiRq6DIlaMbGK2T90mWr7VQ</string>
 
     <string name="loading">Loading...</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">Ok</string>
 
 </resources>

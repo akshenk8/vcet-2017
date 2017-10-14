@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="loginUrl">/login.php</string>
+    <string name="firebaseUrl">/update_firebase.php</string>
+
+    <string name="tryAgainIn">फिर से प्रयास करें:</string>
+    <string name="seconds">सेकंड</string>
+    <string name="username">उपयोगकर्ता नाम</string>
+    <string name="password">पासवर्ड</string>
+    <string name="login">लॉग इन</string>
+
+    <string name="incorrectCredentials">गलत परिचय</string>
+
+    <string name="cantBeEmptyError">यह क्षेत्र रिक्त नहीं रह सकता.</string>
+    <string name="userCustomError">यह फ़ील्ड केवल शामिल हो सकता है a&#8211;z, A&#8211;Z or 0&#8211;9 5-25 के बीच की लंबाई के साथ.</string>
+
+    <string name="passwordCustomError">लंबाई 8 और 20.</string>
+
+    <dimen name="icon_top_margin">8dp</dimen>
+    <dimen name="icon_bottom_margin">8dp</dimen>
+</resources>

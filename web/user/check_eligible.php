@@ -14,7 +14,9 @@ if(isset($_POST['uid'])){
 		$qry1=$qry1->fetch_assoc();
 		$now = time();
 		$last = strtotime($qry1['timestamp']);
-		$diff = floor(($now-$last)/(60*60*24));
+		$next = strtotime("+90 days",strtotime($qry1['timestamp']));
+		$diff =90-floor(($next-$last)/(60*60*24));
+		// $diff = floor(($now-$last)/(60*60*24));
 		$arr['diff']=$diff;	
 	}else{
 		$arr['diff']=90;

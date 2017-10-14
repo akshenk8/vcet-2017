@@ -21,6 +21,7 @@ import com.akshen.bankapp.emergency.EmergencyActivity;
 import com.akshen.bankapp.inventory.InventoryActivity;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class HomeAdapter extends ArrayAdapter<HomeItemHolder> {
 
@@ -117,7 +118,7 @@ public class HomeAdapter extends ArrayAdapter<HomeItemHolder> {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setTitle("Choose an animal");
 
-        int checkedItem = 1; // cow
+        int checkedItem = 0; // cow
         builder.setSingleChoiceItems(language, checkedItem, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

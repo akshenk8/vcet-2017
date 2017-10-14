@@ -15,7 +15,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.a8080.bloodbank.bloodbankuser.EligiblityGame;
 import com.a8080.bloodbank.bloodbankuser.R;
+import com.a8080.bloodbank.bloodbankuser.faq.FAQActivity;
 import com.a8080.bloodbank.bloodbankuser.history.HistoryActivity;
 import com.a8080.bloodbank.bloodbankuser.nearby.NearbyActivity;
 
@@ -123,9 +125,9 @@ public class HomeAdapter extends ArrayAdapter<HomeItemHolder> {
             textContainer.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    Intent i = new Intent(getContext(), DonorActivity.class);
+                    Intent i = new Intent(getContext(), FAQActivity.class);
 
-//                    getContext().startActivity(i);
+                    getContext().startActivity(i);
 
                 }
             });
@@ -134,9 +136,9 @@ public class HomeAdapter extends ArrayAdapter<HomeItemHolder> {
             textContainer.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    Intent i = new Intent(getContext(), InventoryActivity.class);
+                    Intent i = new Intent(getContext(), EligiblityGame.class);
 
-                    //getContext().startActivity(i);
+                    getContext().startActivity(i);
 
                 }
             });

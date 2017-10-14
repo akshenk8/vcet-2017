@@ -29,11 +29,11 @@
 
 
 
-    <string name="homeListContent1">Request blood from near by eligible donors.</string>
-    <string name="homeListContent2">Schedule a camp</string>
-    <string name="homeListContent3">Manage inventory</string>
-    <string name="homeListContent4">Check donor data</string>
-    <string name="homeListContent5">Change app settings</string>
+    <string name="homeListContent1">Near by camps, blood banks and more.</string>
+    <string name="homeListContent2">You earned it!</string>
+    <string name="homeListContent3">Your timeline</string>
+    <string name="homeListContent4">Doubts? We are here!</string>
+    <string name="homeListContent5">Can you donate?</string>
 
 
 

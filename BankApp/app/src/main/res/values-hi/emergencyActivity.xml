@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quantityBottles">मात्रा (बोतलों में)</string>
+    <string name="algoUrl">/algo.php</string>
+    <string name="previous">पिछला</string>
+</resources>

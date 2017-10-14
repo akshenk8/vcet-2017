@@ -53,6 +53,21 @@
         <activity
             android:name=".nearby.NearbyActivity"
             android:label="@string/title_activity_nearby"></activity>
+        <!-- Firebase Notifications -->
+        <service android:name=".notification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".notification.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- ./Firebase Notifications -->
+
+        <activity android:name=".EligiblityGame"/>
+        <activity android:name=".faq.FAQActivity"/>
     </application>
 
 </manifest>

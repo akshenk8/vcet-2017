@@ -2,11 +2,16 @@ package com.akshen.bankapp.notification;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.util.Log;
 
+import com.akshen.bankapp.emergency.ConfirmUserActivity;
+import com.akshen.bankapp.misc.Utils;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
@@ -17,11 +22,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-//        Log.e(TAG, "From: " + remoteMessage.getFrom());
+        Log.e(TAG, "From: " + remoteMessage.getFrom());
 
         if (remoteMessage == null)
             return;
-
+        //Log.e(TAG, "Notification Body: " + remoteMessage.getNotification().getBody());
         // Check if message contains a notification payload.
         /*if (remoteMessage.getNotification() != null) {
             Log.e(TAG, "Notification Body: " + remoteMessage.getNotification().getBody());
@@ -29,7 +34,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         }*/
         // Check if message contains a data payload.
         if (remoteMessage.getData().size() > 0) {
-            //Log.e(TAG, "Data Payload: " + remoteMessage.getData().toString());
+//            Log.e(TAG, "Data Payload: " + remoteMessage.getData().toString());
 
             try {
                 JSONObject json = new JSONObject(remoteMessage.getData().toString());
@@ -58,32 +63,50 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private void handleDataMessage(JSONObject json) {
         Log.e(TAG, "push json: " + json.toString());
 
-        /*try {
-            if(json.has("data")) {
+        try {
+            if (json.has("data")) {
                 JSONObject data = json.getJSONObject("data");
 
-                String title = data.getString("title");
-                String message = data.getString("message");
-                JSONObject payload = data.getJSONObject("payload");
+                String title = "Request from Bloodbank: " + data.getString("name");
 
                 Intent resultIntent = new Intent(getApplicationContext(), ConfirmUserActivity.class);
-                resultIntent.putExtra("payload", payload.toString());
+                resultIntent.putExtra("data", data.toString());
+                //resultIntent.putExtra("location", location);
 
-                showNotificationMessage(getApplicationContext(), title, message, resultIntent);
-            }
-            else if(json.has("body")){
-                String title = json.getString("title");
-                String message = json.getString("body");
+                showNotificationMessage(getApplicationContext(), "Blood Request", title, resultIntent);
+            } else if (json.has("msg")) {
+                Log.e("confirm", json.getJSONObject("msg").toString());
+                json = json.getJSONObject("msg");
 
-                Intent resultIntent = new Intent(getApplicationContext(), HOME.class);
-                resultIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                showNotificationMessage(getApplicationContext(), title, message, resultIntent);
+                SharedPreferences sp = new Utils().getApplicationPreference(this);
+                try {
+                    if (sp.contains("type1")) {
+                        JSONObject type1 = new JSONObject(sp.getString("type1", ""));
+                        if (type1.getString("msg").equalsIgnoreCase("success")) {
+                            JSONArray jsonArray = type1.getJSONArray("banks");
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                                if(jsonObject.getString("bid").equals(json.getString("bid"))){
+                                    if(json.getString("ans").equalsIgnoreCase("yes")) {
+                                        jsonObject.put("status", "2");
+                                    }else{
+                                        jsonObject.put("status", "1");
+                                    }
+                                }
+                            }
+                        }
+                        sp.edit().putString("type1" , type1.toString()).commit();
+                    }
+
+                } catch (Exception e) {
+
+                }
             }
         } catch (JSONException e) {
             Log.e(TAG, "Json Exception: " + e.getMessage());
         } catch (Exception e) {
             Log.e(TAG, "Exception: " + e.getMessage());
-        }*/
+        }
     }
 
     /**

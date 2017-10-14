@@ -2,6 +2,6 @@
     <string name="app_name">Blood Bank</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="QRCode">Donate Your Blood \n Scan your QR Code</string>
-    <string name="profile">Create your profile for save some one else life.</string>
+    <string name="profile">Create your profile to save someones life.</string>
     <string name="title_activity_nearby">Nearby</string>
 </resources>

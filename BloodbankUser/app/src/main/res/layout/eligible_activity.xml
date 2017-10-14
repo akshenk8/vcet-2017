@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true">
+
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/under16"
+        android:layout_marginTop="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="45"
+        android:text=""
+        android:layout_below="@+id/imageview"
+        android:layout_alignLeft="@+id/imageview"
+        android:layout_alignStart="@+id/imageview"
+        android:layout_alignRight="@+id/imageview"
+        android:layout_alignEnd="@+id/imageview"
+        style="@android:style/TextAppearance.Large"/>
+
+    <Button
+        android:id="@+id/yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/question"
+        android:layout_alignStart="@+id/question"
+        android:layout_below="@+id/question"
+        android:layout_marginTop="52dp"
+        android:text="@string/yes" />
+
+    <Button
+        android:id="@+id/no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/question"
+        android:layout_alignRight="@+id/question"
+        android:layout_alignTop="@+id/yes"
+        android:text="@string/no" />
+
+</RelativeLayout>

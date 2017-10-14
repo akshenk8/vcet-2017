@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="listItemBackgroundColor">@color/white</color>
+
+    <dimen name="home_list_item_height">88dp</dimen>
+
+    <string name="homeListString1">आपातकालीन प्रपत्र</string>
+    <string name="homeListString2">रक्तदान शिविर</string>
+    <string name="homeListString3">रक्त पैकेट इन्वेंटरी</string>
+    <string name="homeListString4">स्कैन दाता</string>
+    <string name="homeListString5">सेटिंग्स</string>
+
+    <string-array name="homeListHeadingStrings">
+        <item>@string/homeListString1</item>
+        <item>@string/homeListString2</item>
+        <item>@string/homeListString3</item>
+        <item>@string/homeListString4</item>
+        <item>@string/homeListString5</item>
+    </string-array>
+
+    <string name="homeListContent1">पात्र दाताओं द्वारा पास से रक्त का अनुरोध करें.</string>
+    <string name="homeListContent2">एक शिविर शेड्यूल करें</string>
+    <string name="homeListContent3">सूची प्रबंधित करें</string>
+    <string name="homeListContent4">दाता डेटा की जांच करें</string>
+    <string name="homeListContent5">ऐप सेटिंग बदलें</string>
+
+    <string-array name="homeListDescriptionStrings">
+        <item>@string/homeListContent1</item>
+        <item>@string/homeListContent2</item>
+        <item>@string/homeListContent3</item>
+        <item>@string/homeListContent4</item>
+        <item>@string/homeListContent5</item>
+    </string-array>
+
+    <integer-array name="homeListDrawable">
+        <item>@drawable/emer_form</item>
+        <item>@drawable/blood_camp</item>
+        <item>@drawable/inventory_manager</item>
+        <item>@drawable/scan</item>
+        <item>@drawable/settings1</item>
+    </integer-array>
+</resources>

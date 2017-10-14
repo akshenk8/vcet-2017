@@ -122,21 +122,24 @@ public class NearbyActivity extends FragmentActivity implements OnMapReadyCallba
                                 JSONArray ca = res.getJSONArray("camps");
                                 for (int i = 0; i < ca.length(); i++) {
                                     JSONObject camp = ca.getJSONObject(i);
-                                    JSONObject loc=new JSONObject(camp.getString("location"));
+                                    JSONObject loc = new JSONObject(camp.getString("location"));
                                     LatLng zz = new LatLng(loc.getDouble("lat"), loc.getDouble("lng"));
                                     Marker m = mMap.addMarker(new MarkerOptions()
-                                            .position(zz).snippet("Starts:"+camp.getString("start")
-                                                            + "\nEnds:"+camp.getString("end"))
+                                            .position(zz).snippet("Starts:" + camp.getString("start")
+                                                    + "\nEnds:" + camp.getString("end"))
                                             .title(camp.getString("name")));
                                     camps.add(m);
                                 }
-                                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(camps.get(0).getPosition(),15));
+                                if (ca.length() > 0)
+                                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(camps.get(0).getPosition(), 15));
+                                else
+                                    Toast.makeText(NearbyActivity.this, "Nothing Nearby", Toast.LENGTH_LONG).show();
                             } else {
                                 ((TextView) findViewById(R.id.eligibilityText)).setText(getString(R.string.QRCode));
                             }
                         } catch (Exception e) {
                             Toast.makeText(NearbyActivity.this, "Error occured", Toast.LENGTH_LONG).show();
-                            Log.e("login",e.toString());
+                            Log.e("login", e.toString());
                         } finally {
                             pd.dismiss();
                         }

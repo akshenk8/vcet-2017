@@ -20,7 +20,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class PreviousEmerActivity extends AppCompatActivity {
-
     JSONObject type1,type2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

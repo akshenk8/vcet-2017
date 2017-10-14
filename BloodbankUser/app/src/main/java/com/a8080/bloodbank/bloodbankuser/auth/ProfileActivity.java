@@ -167,7 +167,7 @@ public class ProfileActivity extends AppCompatActivity {
                             map.put("uid", mFirebaseUser.getUid());
                             map.put("name", name.getText().toString().trim());
                             map.put("mobile_no", mAuth.getCurrentUser().getPhoneNumber());
-                            map.put("blood_group", bloodgroup.getText().toString().trim());
+                            map.put("blood_group", bloodgroup.getText().toString().trim().replace('+','P').replace('-','N').toUpperCase());
                             map.put("gender", gender);
 
                             map.put("dob", dob.getText().toString().trim().replace('/','-'));

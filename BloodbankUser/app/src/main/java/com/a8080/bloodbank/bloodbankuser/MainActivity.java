@@ -25,9 +25,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
 
         checkAndReq();
-
-        startActivity(new Intent(this, LoginActivity.class));
-        finish();
     }
 
     public void checkAndReq(){
@@ -49,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
             arr.toArray(req);
 
             ActivityCompat.requestPermissions(this, req, MY_PERMISSIONS_REQUEST);
+        }else{
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
         }
     }
 
@@ -66,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
                 if (req) {
                     checkAndReq();
                 }
+                startActivity(new Intent(this, LoginActivity.class));
+                finish();
 
             }
 

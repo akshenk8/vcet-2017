@@ -39,8 +39,8 @@
 
         <activity
             android:name=".camp.CampMainActivity"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".home.HomeActivity"/>
+            android:parentActivityName=".home.HomeActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".camp.HistoryCampViewActivity"
             android:parentActivityName=".home.HomeActivity"
@@ -57,13 +57,17 @@
             </intent-filter>
         </service>
         <!-- ./Firebase Notifications -->
-        <activity android:name=".donor.DonorActivity"
-            android:parentActivityName=".home.HomeActivity"/>
+        <activity
+            android:name=".donor.DonorActivity"
+            android:parentActivityName=".home.HomeActivity" />
         <activity android:name=".donor.QRView" />
-        <activity android:name=".emergency.EmergencyActivity"
-            android:parentActivityName=".home.HomeActivity"/>
-        <activity android:name=".emergency.PreviousEmerActivity"
-            android:parentActivityName=".home.HomeActivity"></activity>
+        <activity
+            android:name=".emergency.EmergencyActivity"
+            android:parentActivityName=".home.HomeActivity" />
+        <activity
+            android:name=".emergency.PreviousEmerActivity"
+            android:parentActivityName=".home.HomeActivity" />
+        <activity android:name=".emergency.ConfirmUserActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,35 @@
+<resources>
+    <string name="campUpdateUrl">/update_camp.php</string>
+    <string name="campGetUrl">/get_camp.php</string>
+    <string name="campDeleteUrl">/delete_camp.php</string>
+
+    <string name="createNewCamp">नया शिविर बनाएं</string>
+    <string name="pastCamps">पिछले शिविर</string>
+    <string name="submit">जमा करें</string>
+    <string name="doctors_in_camp">शिविर में डॉक्टर (वैकल्पिक)</string>
+    <string name="no_of_volunteers_required">स्वयंसेवकों की संख्या आवश्यक है (डिफ़ॉल्ट: 0)</string>
+    <string name="end_time">अंतिम समय:</string>
+    <string name="start_time">समय शुरू:</string>
+    <string name="end_date">अंतिम तिथि:</string>
+    <string name="start_date">आरंभ करने की तिथि:</string>
+    <string name="city">City</string>
+    <string name="address_line_2">पता पंक्ति 2</string>
+    <string name="address_line_1">पता पंक्ति 1</string>
+    <string name="name_of_the_camp">शिविर का नाम</string>
+    <string name="selectLocation">
+स्थान चुनें</string>
+
+    <string name="nameError">4 या उससे अधिक की लंबाई का वैध नाम दर्ज करें</string>
+    <string name="locationError">
+स्थान आवश्यक है</string>
+    <string name="endDateError">समाप्ति तिथि प्रारंभ तिथि के बाद होनी चाहिए</string>
+
+    <string name="starts">प्रारंभ: </string>
+    <string name="ends">समाप्त: </string>
+    <string name="noCamps">
+शिविरों के लिए कोई डेटा उपलब्ध नहीं है.</string>
+
+    <string name="completed">पूरा कर लिया है</string>
+    <string name="pending">अपूर्ण</string>
+    <string name="ongoing">चल रही है</string>
+</resources>

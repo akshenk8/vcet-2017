@@ -20,6 +20,7 @@ import com.akshen.bankapp.R;
 import com.akshen.bankapp.misc.Utils;
 import com.akshen.bankapp.misc.VolleyRequestQueue;
 import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -80,6 +81,12 @@ public class EmergencyActivity extends AppCompatActivity {
         checkPrev();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        checkPrev();
+    }
+
     public void checkPrev(){
         if(sp.contains("type1")||sp.contains("type2")){
             ((Button)findViewById(R.id.previous)).setVisibility(View.VISIBLE);
@@ -119,7 +126,7 @@ public class EmergencyActivity extends AppCompatActivity {
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
-//                            Log.e("Response", response);
+                            Log.e("Response", response);
                             try {
                                 JSONObject js = new JSONObject(response);
                                 String msg = js.getString("msg");
@@ -134,7 +141,7 @@ public class EmergencyActivity extends AppCompatActivity {
                                 }
                             } catch (Exception e) {
                                 Toast.makeText(EmergencyActivity.this, getString(R.string.errorOccurred), Toast.LENGTH_LONG).show();
-                                //Log.e("login",e.toString());
+                                Log.e("login",e.toString());
                             } finally {
 //                                pd.dismiss();
                             }
@@ -143,6 +150,7 @@ public class EmergencyActivity extends AppCompatActivity {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     pd.dismiss();
+                    Log.e("error",error.toString());
                     Toast.makeText(EmergencyActivity.this, getString(R.string.errorOccurred), Toast.LENGTH_LONG).show();
                 }
             }) {
@@ -157,6 +165,7 @@ public class EmergencyActivity extends AppCompatActivity {
                 }
             };
             stringRequest.setTag(TAG);
+            stringRequest.setRetryPolicy(new DefaultRetryPolicy(60*1000,DefaultRetryPolicy.DEFAULT_MAX_RETRIES,DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
             queue.addToRequestQueue(this, stringRequest);
         }
     }

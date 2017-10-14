@@ -21,7 +21,9 @@ import android.widget.Toast;
 import com.a8080.bloodbank.bloodbankuser.R;
 import com.a8080.bloodbank.bloodbankuser.auth.LoginActivity;
 import com.a8080.bloodbank.bloodbankuser.misc.LocationReciever;
+import com.a8080.bloodbank.bloodbankuser.misc.Utils;
 import com.a8080.bloodbank.bloodbankuser.misc.VolleyRequestQueue;
+import com.a8080.bloodbank.bloodbankuser.notification.Config;
 import com.a8080.bloodbank.bloodbankuser.qrgenerator.QRGeneratorActivity;
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -37,17 +39,19 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.a8080.bloodbank.bloodbankuser.notification.Config.BLOOD_BANK_ADMIN_FIREBASE_SENT;
+
 public class HomeActivity extends AppCompatActivity {
 
     CardView imageButton;
     ImageButton img;
     VolleyRequestQueue queue;
     String MyPREFERENCES = "BloodBankUser";
+    SharedPreferences sp;
     String URL;
     private Toolbar toolbar;
     private FirebaseAuth mAuth;
     private FirebaseUser mFirebaseUser;
-    private SharedPreferences sharedPreferences;
     private String TAG = "ProfileActivity";
 
     @Override
@@ -59,6 +63,11 @@ public class HomeActivity extends AppCompatActivity {
 
         LocationReciever alarm = new LocationReciever();
         alarm.SetAlarm(this);
+        sp = new Utils().getApplicationPreference(this);
+
+        if(!sp.getBoolean(BLOOD_BANK_ADMIN_FIREBASE_SENT,false)){
+            new Config().sendRegistrationToServer(this,null);
+        }
 
         URL = getString(R.string.protocol) + "" + getString(R.string.domain) + "" + getString(R.string.baseUrl) + getString(R.string.eligibleUrl);
         checkEligibilty();
@@ -118,6 +127,7 @@ public class HomeActivity extends AppCompatActivity {
                 LocationReciever alarm=new LocationReciever();
                 alarm.CancelAlarm(this);
                 Log.e("logout", "logout");
+                sp.edit().putBoolean(BLOOD_BANK_ADMIN_FIREBASE_SENT, false).commit();
                 startActivity(new Intent(this, LoginActivity.class));
                 finish();
                 // search action
@@ -141,7 +151,7 @@ public class HomeActivity extends AppCompatActivity {
                                 if(diff>=90){
                                     ((TextView)findViewById(R.id.eligibilityText)).setText(getString(R.string.eligibleToDonate));
                                 }else{
-                                    ((TextView)findViewById(R.id.eligibilityText)).setText(getString(R.string.willBeEligibleIn1)+" "+diff+" "+getString(R.string.willBeEligibleIn2));
+                                    ((TextView)findViewById(R.id.eligibilityText)).setText(getString(R.string.willBeEligibleIn1)+" "+(90-diff)+" "+getString(R.string.willBeEligibleIn2));
                                 }
                             }else{
                                 ((TextView)findViewById(R.id.eligibilityText)).setText(getString(R.string.QRCode));
